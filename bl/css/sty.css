@@ -1,0 +1,667 @@
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.main-btn {
+    background-color: #3d3a3a;
+    color: rgb(224, 109, 109);
+    padding: 0.5rem 1rem;
+    transition: 0.3s;
+}
+
+/* Start Nav */
+.navbar {
+    background-color: #fff;
+}
+
+.navbar .navbar-nav .nav-link,
+.navbar-brand {
+    color: #212529;
+    transition: 0.3s;
+}
+
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus,
+.navbar-brand:hover,
+.main-btn:hover {
+    color: rgb(61, 142, 147);
+}
+
+.navbar .navbar-toggler {
+    color: black;
+    border-color: black;
+}
+
+.navbar .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* Custom styles */
+.resource-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.resource-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+
+}
+
+.availability-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 0.9rem;
+}
+
+.step-indicator .nav-link.active {
+    background-color: #0d6efd;
+    color: #fff;
+}
+
+.step-indicator .nav-link.disabled {
+    background-color: #e9ecef;
+    color: #6c757d;
+}
+
+.search-btn {
+    background-color: #17a2b8;
+    color: white;
+    border: none;
+    padding: 7px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    background-color: #138496;
+    transform: scale(1.05);
+}
+
+.custom-btn {
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    color: #f44036;
+    border: 3px solid #f44036;
+    background: linear-gradient(to right, #f44036 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+}
+
+
+.custom-btn:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-position: left bottom;
+    color: white;
+    transform: scale(1.05);
+}
+
+
+.custom-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+}
+
+/* Availability Calendar Styles */
+.calendar {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+/* .calendar-day {
+    width: 14%;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    text-align: center;
+    position: relative;
+}
+
+.calendar-day.booked {
+    background-color: #ffcccc;
+}
+
+.calendar-day.available {
+    background-color: #ccffcc;
+} */
+.calendar-day {
+    width: 30px;
+    /* Adjust as needed */
+    height: 30px;
+    /* Adjust as needed */
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.available {
+    background-color: #28a745;
+    /* Green for available */
+    color: white;
+}
+
+.booked {
+    background-color: #dc3545;
+    /* Red for booked */
+    color: white;
+    cursor: not-allowed;
+}
+
+/* Filter Input */
+#filterInput {
+    margin-bottom: 20px;
+}
+
+/* Start Reasource */
+.resource-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.resource-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+/* Modal styles */
+.modal-header {
+    border-bottom: none;
+}
+
+.thumbnail {
+    height: 150px;
+    /* Reduced height */
+    object-fit: cover;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.statistics {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.chart-container {
+    width: 100%;
+    max-width: 400px;
+    /* Set max width for charts */
+    margin: auto;
+}
+
+.table {
+    font-size: 0.9rem;
+    /* Reduced font size for table */
+}
+
+.search-filter {
+    display: flex;
+    align-items: center;
+    /* Center items vertically */
+    margin-bottom: 20px;
+}
+
+.search-filter input {
+    flex: 1;
+    margin-right: 10px;
+    border-radius: 20px;
+    /* Rounded corners */
+    padding: 10px 15px;
+    /* Padding for better appearance */
+}
+
+/* @media (max-width:991px) {
+    .discuss-search {
+        width: 100% !important;
+        margin-bottom: 20px !important;
+    }
+
+    .discuss-field {
+        flex-direction: column;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+} */
+/* No need for additional height or width adjustments */
+.discuss-field {
+    flex-wrap: wrap;
+    /* Allow items to wrap if necessary */
+}
+
+@media (max-width: 991px) {
+
+    .discuss-field {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .discuss-search {
+        width: 100% !important;
+        margin-bottom: 10px !important;
+        flex-basis: 100%;
+    }
+
+    .btn-group {
+        width: 100%;
+    }
+
+    .btn-group .btn {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+
+.btn {
+    border-radius: 20px;
+    margin-right: 5px;
+}
+
+.filter-buttons {
+    margin-left: 10px;
+}
+
+.filter-button {
+    margin-right: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+.sort-by-section {
+    margin-bottom: 20px;
+}
+
+.research-item {
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.research-item:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+
+}
+
+.view-reaserch-btn-1 {
+    color: white;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    color: black;
+    border: 3px solid black;
+    background: linear-gradient(to right, black 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+}
+
+.view-reaserch-btn {
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    color: black;
+    border: 3px solid black;
+    background: linear-gradient(to right, black 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+}
+
+
+.view-reaserch-btn:hover,
+.view-reaserch-btn-1:hover,
+.dow-reaserch-btn:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-position: left bottom;
+    color: white;
+    transform: scale(1.05);
+}
+
+
+.view-reaserch-btn:focus,
+.view-reaserch-btn-1:focus,
+.dow-reaserch-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+}
+
+.dow-reaserch-btn {
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    color: rgb(53, 159, 149);
+    border: 3px solid rgb(53, 159, 149);
+    background: linear-gradient(to right, rgb(53, 159, 149) 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+}
+
+.project-card {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    position: relative;
+}
+
+.progress-bar {
+    height: 100%;
+}
+
+.team-members img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 5px;
+}
+
+.contact-info {
+    margin-top: 15px;
+}
+
+.contact-info a {
+    text-decoration: none;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+.video-embed {
+    width: 100%;
+    height: 350px;
+    margin-top: 20px;
+}
+
+.usage-instructions {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.research-links a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.view-details-icon {
+    font-size: 18px;
+    cursor: pointer;
+    color: #007bff;
+    margin-top: 10px;
+}
+
+.see-more {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #578bc2;
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 5px;
+    transition: color 0.3s;
+}
+
+.see-more>svg {
+    margin-right: 5px;
+}
+
+.see-more:hover {
+    color: #136dcd;
+}
+
+/* Start Projects */
+.project-card {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+
+}
+
+.project-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+
+}
+
+.project-card img {
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    position: relative;
+}
+
+.progress-bar {
+    height: 100%;
+}
+
+.progress-label {
+    background-color: rgb(100, 100, 197);
+    color: white;
+    border-radius: 50%;
+    padding: 5px 3px;
+    font-size: 12px;
+}
+
+.team-members img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 5px;
+}
+
+.contact-info {
+    margin-top: 15px;
+}
+
+.contact-info a {
+    text-decoration: none;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+.video-embed {
+    width: 100%;
+    height: 350px;
+    margin-top: 20px;
+}
+
+.usage-instructions {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.research-links a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.view-details-icon {
+    font-size: 18px;
+    cursor: pointer;
+    color: #007bff;
+    margin-top: 10px;
+}
+
+.see-more {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #578bc2;
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 5px;
+    transition: color 0.3s;
+}
+
+.see-more>svg {
+    margin-right: 5px;
+}
+
+.see-more:hover {
+    color: #136dcd;
+}
+
+/* Project Ideas Section */
+.project-ideas {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.project-ideas h2 {
+    margin-bottom: 20px;
+}
+
+.project-ideas form {
+    margin-top: 20px;
+}
+
+/* Separator line */
+.separator {
+    height: 2px;
+    background-color: #e0e0e0;
+    margin: 20px 0;
+}
+
+/* Start Profile */
+
+.profile-header {
+    background-color: #4a90e2;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.badge {
+    background-color: #1b110f;
+    color: white;
+    font-weight: 500 !important
+}
+
+.card-title {
+    color: #333;
+}
+
+.card-body {
+    background-color: #f8f9fa;
+}
+
+#admin-section {
+    display: none;
+}
+
+.btn-danger {
+    background-color: #D9534F;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-warning {
+    border-radius: 30px;
+}
+
+/* Admin interface styling */
+.admin-card {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.admin-card h4 {
+    color: #333;
+}
+
+.admin-card p {
+    color: #555;
+}
+
+/* Start Enevt */
+.event-card {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.event-card img {
+    height: 150px;
+    object-fit: cover;
+}
+
+.notification {
+    background-color: #ffeb3b;
+    padding: 10px;
+    margin-top: 15px;
+    display: none;
+}
+
+.notification h6 {
+    margin: 0;
+    font-weight: bold;
+}
+
+.notification p {
+    margin: 0;
+}
+
+/* Start Animations */
+
+/* End Animations */

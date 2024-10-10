@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRIP - Login</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Login</h2>
+            <!-- The form action points to the home page (simulating successful login) -->
+            <form action="home.html" method="GET">
+                <label for="email">Username or Email</label>
+                <input type="text" id="email" placeholder="Enter your email" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+
+                <label for="role">Role</label>
+                <select id="role">
+                    <option value="student">Student</option>
+                    <option value="staff">Staff</option>
+                    <option value="admin">Administrator</option>
+                </select>
+
+                <div class="actions">
+                    <!-- On form submit, it will navigate to home.html -->
+                    <button type="submit">Login</button>
+                    <a href="#" class="forgot">Forgot Password?</a>
+                </div>
+            </form>
+            <div class="signup">
+                <p>New to SRIP? <a href="#">Sign Up</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Management</title>
+
+    <!-- CSS Links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/sty.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Strip</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main"
+                aria-controls="main" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="main">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link p-2 p-lg-3" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-2 p-lg-3" href="research.html">Research Archive</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active p-2 p-lg-3" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-2 p-lg-3" href="resources.html">Resources</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link p-2 p-lg-3" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-2 p-lg-3" href="profile.html">Profile</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link p-2 p-lg-3" href="Discussion Groups.html">Discussion Forum</a>
+                    </li>
+                </ul>
+                <a href="#" class="btn main-btn rounded-pill">Logout</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <!-- Tabs Navigation -->
+        <ul class="nav nav-tabs" id="projectTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="ongoing-tab" data-bs-toggle="tab" data-bs-target="#ongoing"
+                    type="button" role="tab" aria-controls="ongoing" aria-selected="true">Ongoing Projects</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="completed-tab" data-bs-toggle="tab" data-bs-target="#completed"
+                    type="button" role="tab" aria-controls="completed" aria-selected="false">Completed Projects</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="proposed-tab" data-bs-toggle="tab" data-bs-target="#proposed" type="button"
+                    role="tab" aria-controls="proposed" aria-selected="false">Proposed Projects</button>
+            </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="projectTabsContent">
+            <!-- Ongoing Projects -->
+            <div class="tab-pane fade show active" id="ongoing" role="tabpanel" aria-labelledby="ongoing-tab">
+                <div class="row mt-4">
+                    <div class="col-md-4">
+                        <div class="card project-card">
+                            <img src="imgs/news-01.png" class="card-img-top" alt="Project Thumbnail">
+                            <div class="card-body">
+                                <h5 class="card-title">Autonomous Drone Navigation</h5>
+                                <p class="card-text">Designing an autonomous drone system capable of obstacle detection
+                                    and path planning using AI-based algorithms.</p>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 70%"
+                                        aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <span class="progress-label">70%</span>
+                                <div class="team-members mt-3">
+                                    <strong>Team:</strong>
+                                    <img src="imgs/news-01.png" alt="Team Member 1">
+                                    <img src="imgs/news-01.png" alt="Team Member 2">
+                                    <img src="imgs/news-01.png" alt="Team Member 3">
+                                </div>
+                                <div class="contact-info mt-3">
+                                    <strong>Contact:</strong>
+                                    <a href="mailto:droneteam@example.com"><i class="fas fa-envelope"></i>
+                                        droneteam@example.com</a>
+                                </div>
+                                <span class="see-more" data-bs-toggle="modal" data-bs-target="#projectDetailsModal1"><i
+                                        class="fas fa-eye"></i> See More</span>
+                                <button class="btn btn-success my-2 ms-2">Patent Application</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card project-card">
+                            <img src="imgs/news-01.png" class="card-img-top" alt="Project Thumbnail">
+                            <div class="card-body">
+                                <h5 class="card-title">Smart Traffic Light System</h5>
+                                <p class="card-text">Developing a smart traffic management system using IoT sensors to
+                                    reduce traffic congestion in urban areas.</p>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 50%"
+                                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <span class="progress-label">50%</span>
+                                <div class="team-members mt-3">
+                                    <strong>Team:</strong>
+                                    <img src="imgs/news-01.png" alt="Team Member 1">
+                                    <img src="imgs/news-01.png" alt="Team Member 2">
+                                </div>
+                                <div class="contact-info mt-3 mb-2">
+                                    <strong>Contact:</strong>
+                                    <a href="mailto:trafficteam@example.com"><i class="fas fa-envelope"></i>
+                                        trafficteam@example.com</a>
+                                </div>
+                                <span class="see-more" data-bs-toggle="modal" data-bs-target="#projectDetailsModal2"><i
+                                        class="fas fa-eye"></i> See More</span>
+                                <button class="btn btn-success my-2 ms-2">Patent Application</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card project-card">
+                            <img src="imgs/news-01.png" class="card-img-top" alt="Project Thumbnail">
+                            <div class="card-body">
+                                <h5 class="card-title">Smart Waste Management System</h5>
+                                <p class="card-text">Creating a smart waste management solution to optimize collection
+                                    routes and reduce operational costs.</p>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 60%"
+                                        aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <span class="progress-label">60%</span>
+                                <div class="team-members mt-3">
+                                    <strong>Team:</strong>
+                                    <img src="imgs/news-01.png" alt="Team Member 1">
+                                    <img src="imgs/news-01.png" alt="Team Member 2">
+                                </div>
+                                <div class="contact-info mt-3 mb-2">
+                                    <strong>Contact:</strong>
+                                    <a href="mailto:wasteteam@example.com"><i class="fas fa-envelope"></i>
+                                        wasteteam@example.com</a>
+                                </div>
+                                <span class="see-more" data-bs-toggle="modal" data-bs-target="#projectDetailsModal3"><i
+                                        class="fas fa-eye"></i> See More</span>
+                                <button class="btn btn-success my-2 ms-2">Patent Application</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Completed Projects -->
+            <div class="tab-pane fade" id="completed" role="tabpanel" aria-labelledby="completed-tab">
+                <div class="row mt-4">
+                    <div class="col-md-4">
+                        <div class="card project-card">
+                            <img src="imgs/news-01.png" class="card-img-top" alt="Project Thumbnail">
+                            <div class="card-body">
+                                <h5 class="card-title">3D Printed Prosthetics</h5>
+                                <p class="card-text">A project that developed affordable, 3D-printed prosthetics for
+                                    disabled individuals, focusing on ease of use and customization.</p>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 100%"
+                                        aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <span class="progress-label">100%</span>
+                                <div class="team-members mt-3">
+                                    <strong>Team:</strong>
+                                    <img src="imgs/news-01.png" alt="Team Member 1">
+                                    <img src="imgs/news-01.png" alt="Team Member 2">
+                                </div>
+                                <div class="contact-info mt-3 mb-2">
+                                    <strong>Contact:</strong>
+                                    <a href="mailto:prostheticsteam@example.com"><i class="fas fa-envelope"></i>
+                                        prostheticsteam@example.com</a>
+                                </div>
+                                <span class="see-more" data-bs-toggle="modal" data-bs-target="#projectDetailsModal4"><i
+                                        class="fas fa-eye"></i> See More</span>
+                                <button class="btn btn-success my-2 ms-2">Patent Application</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card project-card">
+                            <img src="imgs/news-01.png" class="card-img-top" alt="Project Thumbnail">
+                            <div class="card-body">
+                                <h5 class="card-title">Renewable Energy Microgrid</h5>
+                                <p class="card-text">Implemented a microgrid system powered by solar and wind energy to
+                                    supply electricity to remote villages.</p>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 100%"
+                                        aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <span class="progress-label">100%</span>
+                                <div class="team-members mt-3">
+                                    <strong>Team:</strong>
+                                    <img src="imgs/news-01.png" alt="Team Member 1">
+                                    <img src="imgs/news-01.png" alt="Team Member 2">
+                                </div>
+                                <div class="contact-info mt-3 mb-2">
+                                    <strong>Contact:</strong>
+                                    <a href="mailto:microgridteam@example.com"><i class="fas fa-envelope"></i>
+                                        microgridteam@example.com</a>
+                                </div>
+                                <span class="see-more" data-bs-toggle="modal" data-bs-target="#projectDetailsModal5"><i
+                                        class="fas fa-eye"></i> See More</span>
+                                <button class="btn btn-success my-2 ms-2">Patent Application</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card project-card">
+                            <img src="imgs/news-01.png" class="card-img-top" alt="Project Thumbnail">
+                            <div class="card-body">
+                                <h5 class="card-title">AI-Based Predictive Maintenance</h5>
+                                <p class="card-text">Developed an AI solution for predictive maintenance to reduce
+                                    downtime in manufacturing processes.</p>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 90%"
+                                        aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <span class="progress-label">90%</span>
+                                <div class="team-members mt-3">
+                                    <strong>Team:</strong>
+                                    <img src="imgs/news-01.png" alt="Team Member 1">
+                                    <img src="imgs/news-01.png" alt="Team Member 2">
+                                </div>
+                                <div class="contact-info mt-3 mb-2">
+                                    <strong>Contact:</strong>
+                                    <a href="mailto:maintenance_team@example.com"><i class="fas fa-envelope"></i>
+                                        maintenance_team@example.com</a>
+                                </div>
+                                <span class="see-more" data-bs-toggle="modal" data-bs-target="#projectDetailsModal6"><i
+                                        class="fas fa-eye"></i> See More</span>
+                                <button class="btn btn-success my-2 ms-2">Patent Application</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proposed Projects -->
+            <div class="tab-pane fade" id="proposed" role="tabpanel" aria-labelledby="proposed-tab">
+                <div class="row mt-4">
+                    <div class="col-md-4">
+                        <div class="card project-card">
+                            <img src="imgs/news-01.png" class="card-img-top" alt="Project Thumbnail">
+                            <div class="card-body">
+                                <h5 class="card-title">Wastewater Treatment Innovation</h5>
+                                <p class="card-text">Proposing a novel chemical process to enhance the efficiency of
+                                    wastewater treatment plants.</p>
+                                <div class="team-members mt-3 mb-2">
+                                    <strong>Team:</strong>
+                                    <img src="imgs/news-01.png" alt="Team Member 1">
+                                    <img src="imgs/news-01.png" alt="Team Member 2">
+                                </div>
+                                <div class="contact-info mt-3">
+                                    <strong>Contact:</strong>
+                                    <a href="mailto:wastewaterteam@example.com"><i class="fas fa-envelope"></i>
+                                        wastewaterteam@example.com</a>
+                                </div>
+                                <span class="see-more" data-bs-toggle="modal" data-bs-target="#projectDetailsModal7"><i
+                                        class="fas fa-eye"></i> See More</span>
+                                <button class="btn btn-success my-2 ms-2">Patent Application</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card project-card">
+                            <img src="imgs/news-01.png" class="card-img-top" alt="Project Thumbnail">
+                            <div class="card-body">
+                                <h5 class="card-title">Smart Grid Energy Management</h5>
+                                <p class="card-text">Proposing the development of a smart grid system for optimizing
+                                    electricity distribution and reducing energy waste.</p>
+                                <div class="team-members mt-3">
+                                    <strong>Team:</strong>
+                                    <img src="imgs/news-01.png" alt="Team Member 1">
+                                    <img src="imgs/news-01.png" alt="Team Member 2">
+                                </div>
+                                <div class="contact-info mt-3 mb-2">
+                                    <strong>Contact:</strong>
+                                    <a href="mailto:smartgridteam@example.com"><i class="fas fa-envelope"></i>
+                                        smartgridteam@example.com</a>
+                                </div>
+                                <span class="see-more" data-bs-toggle="modal" data-bs-target="#projectDetailsModal8"><i
+                                        class="fas fa-eye"></i> See More</span>
+                                <button class="btn btn-success my-2 ms-2">Patent Application</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card project-card">
+                            <img src="imgs/news-01.png" class="card-img-top" alt="Project Thumbnail">
+                            <div class="card-body">
+                                <h5 class="card-title">Solar-Powered Water Purification</h5>
+                                <p class="card-text">Developing a solar-powered system for efficient water purification
+                                    in remote areas.</p>
+                                <div class="team-members mt-3">
+                                    <strong>Team:</strong>
+                                    <img src="imgs/news-01.png" alt="Team Member 1">
+                                    <img src="imgs/news-01.png" alt="Team Member 2">
+                                </div>
+                                <div class="contact-info mt-3 mb-2">
+                                    <strong>Contact:</strong>
+                                    <a href="mailto:solarteam@example.com"><i class="fas fa-envelope"></i>
+                                        solarteam@example.com</a>
+                                </div>
+                                <span class="see-more" data-bs-toggle="modal" data-bs-target="#projectDetailsModal9"><i
+                                        class="fas fa-eye"></i> See More</span>
+                                <button class="btn btn-success my-2 ms-2">Patent Application</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Detailed Project Information: Ongoing Project -->
+    <div class="modal fade" id="projectDetailsModal1" tabindex="-1" aria-labelledby="projectDetailsLabel1"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projectDetailsLabel1">Autonomous Drone Navigation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Project Lead:</strong> Dr. Sarah Lee | <strong>Team:</strong> John Doe, Emily Clark,
+                        Ahmed Ali</p>
+                    <p><strong>Progress:</strong> 70% Complete</p>
+
+                    <!-- Project Video -->
+                    <div class="project-section">
+                        <h4>Project Overview Video</h4>
+                        <iframe class="video-embed" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0"
+                            allowfullscreen></iframe>
+                    </div>
+
+                    <!-- Usage Instructions -->
+                    <div class="project-section">
+                        <h4>Usage Instructions</h4>
+                        <div class="usage-instructions">
+                            <ul>
+                                <li>Ensure the drone is fully charged before initiating any flight operations.</li>
+                                <li>Open the custom drone navigation app, available for both iOS and Android, and sync
+                                    it with the drone’s control system via Bluetooth.</li>
+                                <li>Select the area for navigation using the GPS mapping feature, then use the AI system
+                                    to define obstacles and paths.</li>
+                                <li>Initiate the automated flight path by clicking the "Autonomous Mode" button.</li>
+                                <li>If manual override is necessary, switch to "Manual Control" mode.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Associated Research Links -->
+                    <div class="project-section">
+                        <h4>Related Research and Publications</h4>
+                        <div class="research-links">
+                            <p>Check out related studies and technical papers:</p>
+                            <ul>
+                                <li><a href="https://www.researchgate.net/publication/123456" target="_blank">AI-Powered
+                                        Obstacle Avoidance Systems for Drones</a></li>
+                                <li><a href="https://www.ieee.org/publication/789101" target="_blank">Advanced Path
+                                        Planning Algorithms in UAVs</a></li>
+                                <li><a href="https://example.com/drone-sensor-paper" target="_blank">Real-Time Sensor
+                                        Fusion in Autonomous Drones</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Completed Project Information -->
+    <div class="modal fade" id="projectDetailsModal2" tabindex="-1" aria-labelledby="projectDetailsLabel2"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projectDetailsLabel2">3D Printed Prosthetics</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Project Lead:</strong> Dr. Alex Smith | <strong>Team:</strong> Michael Brown, Laura Green
+                    </p>
+                    <p><strong>Progress:</strong> Completed</p>
+
+                    <!-- Project Video -->
+                    <div class="project-section">
+                        <h4>Project Overview Video</h4>
+                        <iframe class="video-embed" src="https://www.youtube.com/embed/xyz123" frameborder="0"
+                            allowfullscreen></iframe>
+                    </div>
+
+                    <!-- Usage Instructions -->
+                    <div class="project-section">
+                        <h4>Usage Instructions</h4>
+                        <div class="usage-instructions">
+                            <ul>
+                                <li>Fit the prosthetic to the user's limb for maximum comfort.</li>
+                                <li>Adjust the straps for secure placement and stability.</li>
+                                <li>Follow the guide on using the prosthetic for different activities.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Associated Research Links -->
+                    <div class="project-section">
+                        <h4>Related Research and Publications</h4>
+                        <div class="research-links">
+                            <p>Check out related studies and technical papers:</p>
+                            <ul>
+                                <li><a href="https://www.researchgate.net/publication/789012" target="_blank">3D
+                                        Printing Technologies for Prosthetic Devices</a></li>
+                                <li><a href="https://www.elsevier.com/publication/345678" target="_blank">Customization
+                                        in Prosthetics Using 3D Printing</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Proposed Project Information -->
+    <div class="modal fade" id="projectDetailsModal3" tabindex="-1" aria-labelledby="projectDetailsLabel3"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projectDetailsLabel3">Wastewater Treatment Innovation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Project Lead:</strong> Dr. Julia White | <strong>Team:</strong> Mark Davis, Susan Lee</p>
+                    <p><strong>Progress:</strong> Proposed</p>
+
+                    <!-- Project Video -->
+                    <div class="project-section">
+                        <h4>Project Overview Video</h4>
+                        <iframe class="video-embed" src="https://www.youtube.com/embed/xyz789" frameborder="0"
+                            allowfullscreen></iframe>
+                    </div>
+
+                    <!-- Usage Instructions -->
+                    <div class="project-section">
+                        <h4>Usage Instructions</h4>
+                        <div class="usage-instructions">
+                            <ul>
+                                <li>Follow the treatment process as outlined in the provided documentation.</li>
+                                <li>Monitor chemical reactions regularly to ensure optimal performance.</li>
+                                <li>Report any inconsistencies or issues to the project lead immediately.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Proposed Project Information -->
+    <div class="modal fade" id="projectDetailsModal4" tabindex="-1" aria-labelledby="projectDetailsLabel4"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projectDetailsLabel4">Smart Grid Energy Management</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Project Lead:</strong> Dr. Emily Stone | <strong>Team:</strong> Chris Harris, Maria
+                        Thompson</p>
+                    <p><strong>Progress:</strong> Proposed</p>
+
+                    <!-- Project Video -->
+                    <div class="project-section">
+                        <h4>Project Overview Video</h4>
+                        <iframe class="video-embed" src="https://www.youtube.com/embed/xyz456" frameborder="0"
+                            allowfullscreen></iframe>
+                    </div>
+
+                    <!-- Usage Instructions -->
+                    <div class="project-section">
+                        <h4>Usage Instructions</h4>
+                        <div class="usage-instructions">
+                            <ul>
+                                <li>Install the smart grid management software on the central server.</li>
+                                <li>Connect all energy sources and consumers to the grid.</li>
+                                <li>Monitor energy usage and optimize distribution based on real-time data.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional Modals for Completed Projects -->
+    <div class="modal fade" id="projectDetailsModal5" tabindex="-1" aria-labelledby="projectDetailsLabel5"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projectDetailsLabel5">Renewable Energy Microgrid</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Project Lead:</strong> Dr. Paul Turner | <strong>Team:</strong> Sarah Connor, John Wick
+                    </p>
+                    <p><strong>Progress:</strong> Completed</p>
+
+                    <!-- Project Video -->
+                    <div class="project-section">
+                        <h4>Project Overview Video</h4>
+                        <iframe class="video-embed" src="https://www.youtube.com/embed/xyz654" frameborder="0"
+                            allowfullscreen></iframe>
+                    </div>
+
+                    <!-- Usage Instructions -->
+                    <div class="project-section">
+                        <h4>Usage Instructions</h4>
+                        <div class="usage-instructions">
+                            <ul>
+                                <li>Ensure all connections are secure before starting the system.</li>
+                                <li>Use the monitoring app to track energy production and consumption.</li>
+                                <li>Adjust settings as necessary based on performance data.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="projectDetailsModal6" tabindex="-1" aria-labelledby="projectDetailsLabel6"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projectDetailsLabel6">AI-Based Predictive Maintenance</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Project Lead:</strong> Dr. Kevin Patel | <strong>Team:</strong> Jane Smith, Leo Kim</p>
+                    <p><strong>Progress:</strong> 90% Complete</p>
+
+                    <!-- Project Video -->
+                    <div class="project-section">
+                        <h4>Project Overview Video</h4>
+                        <iframe class="video-embed" src="https://www.youtube.com/embed/xyz999" frameborder="0"
+                            allowfullscreen></iframe>
+                    </div>
+
+                    <!-- Usage Instructions -->
+                    <div class="project-section">
+                        <h4>Usage Instructions</h4>
+                        <div class="usage-instructions">
+                            <ul>
+                                <li>Run the predictive maintenance software on the factory's central system.</li>
+                                <li>Set the parameters for the machinery you want to monitor.</li>
+                                <li>Review the generated reports regularly to identify maintenance needs.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional Modals for Proposed Projects -->
+    <div class="modal fade" id="projectDetailsModal7" tabindex="-1" aria-labelledby="projectDetailsLabel7"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projectDetailsLabel7">Wastewater Treatment Innovation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Project Lead:</strong> Dr. Julia White | <strong>Team:</strong> Mark Davis, Susan Lee</p>
+                    <p><strong>Progress:</strong> Proposed</p>
+
+                    <!-- Project Video -->
+                    <div class="project-section">
+                        <h4>Project Overview Video</h4>
+                        <iframe class="video-embed" src="https://www.youtube.com/embed/xyz789" frameborder="0"
+                            allowfullscreen></iframe>
+                    </div>
+
+                    <!-- Usage Instructions -->
+                    <div class="project-section">
+                        <h4>Usage Instructions</h4>
+                        <div class="usage-instructions">
+                            <ul>
+                                <li>Follow the treatment process as outlined in the provided documentation.</li>
+                                <li>Monitor chemical reactions regularly to ensure optimal performance.</li>
+                                <li>Report any inconsistencies or issues to the project lead immediately.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="projectDetailsModal8" tabindex="-1" aria-labelledby="projectDetailsLabel8"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projectDetailsLabel8">Smart Grid Energy Management</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Project Lead:</strong> Dr. Emily Stone | <strong>Team:</strong> Chris Harris, Maria
+                        Thompson</p>
+                    <p><strong>Progress:</strong> Proposed</p>
+
+                    <!-- Project Video -->
+                    <div class="project-section">
+                        <h4>Project Overview Video</h4>
+                        <iframe class="video-embed" src="https://www.youtube.com/embed/xyz456" frameborder="0"
+                            allowfullscreen></iframe>
+                    </div>
+
+                    <!-- Usage Instructions -->
+                    <div class="project-section">
+                        <h4>Usage Instructions</h4>
+                        <div class="usage-instructions">
+                            <ul>
+                                <li>Install the smart grid management software on the central server.</li>
+                                <li>Connect all energy sources and consumers to the grid.</li>
+                                <li>Monitor energy usage and optimize distribution based on real-time data.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="projectDetailsModal9" tabindex="-1" aria-labelledby="projectDetailsLabel9"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projectDetailsLabel9">Solar-Powered Water Purification</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Project Lead:</strong> Dr. Anna Belle | <strong>Team:</strong> John Carter, Laura Palmer
+                    </p>
+                    <p><strong>Progress:</strong> Proposed</p>
+
+                    <!-- Project Video -->
+                    <div class="project-section">
+                        <h4>Project Overview Video</h4>
+                        <iframe class="video-embed" src="https://www.youtube.com/embed/xyz321" frameborder="0"
+                            allowfullscreen></iframe>
+                    </div>
+
+                    <!-- Usage Instructions -->
+                    <div class="project-section">
+                        <h4>Usage Instructions</h4>
+                        <div class="usage-instructions">
+                            <ul>
+                                <li>Assemble the solar panels and connect them to the purification unit.</li>
+                                <li>Fill the water source and start the purification process using the control panel.
+                                </li>
+                                <li>Monitor the output quality and adjust settings as needed.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Project Ideas Section -->
+    <div class="project-ideas text-center my-5">
+        <h2>Project Ideas</h2>
+        <p>Here To Discuss Or Submit A New Idea <i class="fas fa-lightbulb"></i></p>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#submitIdeaModal">Submit Your
+            Idea</button>
+    </div>
+
+    <!-- Modal for Submitting Project Ideas -->
+    <div class="modal fade" id="submitIdeaModal" tabindex="-1" aria-labelledby="submitIdeaLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="submitIdeaLabel">Submit Your Project Idea</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="ideaForm">
+                        <div class="mb-3">
+                            <label for="ideaTitle" class="form-label">Project Title</label>
+                            <input type="text" class="form-control" id="ideaTitle"
+                                placeholder="Enter your project title" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="ideaDescription" class="form-label">Project Description</label>
+                            <textarea class="form-control" id="ideaDescription" rows="4"
+                                placeholder="Describe your project idea" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="submitterEmail" class="form-label">Your Email</label>
+                            <input type="email" class="form-control" id="submitterEmail" placeholder="Enter your email"
+                                required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit Idea</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirmation Message Modal -->
+    <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmationLabel">Confirmation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Your project idea has been submitted successfully!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS Links -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script>
+        document.getElementById('ideaForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            // You can add any AJAX request here to handle form data submission
+
+            // Show confirmation modal
+            var confirmationModal = new bootstrap.Modal(document.getElementById('confirmationModal'));
+            confirmationModal.show();
+
+            // Reset the form
+            this.reset();
+
+            // Close the submit idea modal
+            var submitIdeaModal = bootstrap.Modal.getInstance(document.getElementById('submitIdeaModal'));
+            submitIdeaModal.hide();
+        });
+    </script>
+
+</body>
+
+</html>
